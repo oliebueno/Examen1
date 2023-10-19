@@ -8,9 +8,6 @@ v1 = Vector3Di (1, 2, 3)
 v2 :: Vector3Di Int
 v2 = Vector3Di (4, 5, 6)
 
-v3 :: Vector3Di Int
-v3 = Vector3Di (0, 0, 0)
-
 -- Definimos algunas pruebas unitarias para cada operación
 testSuma :: Test
 testSuma = TestCase (assertEqual "Suma de vectores" (Vector3Di (5, 7, 9)) (v1 + v2))
