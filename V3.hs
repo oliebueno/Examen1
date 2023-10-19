@@ -5,10 +5,6 @@ module V3 where
 newtype Vector3Di a = Vector3Di (a, a, a)
 
 -- Implementa las operaciones de suma, resta, producto vectorial, módulo y producto escalar.
-instance (Eq a) => Eq (Vector3Di a) where
-  (==) :: Vector3Di a -> Vector3Di a -> Bool
-  (Vector3Di (i, j, k)) == (Vector3Di (x, y, z)) = i == x && j == y && k == z
-
 instance (Num a) => Num (Vector3Di a) where
   (+) :: Vector3Di a -> Vector3Di a -> Vector3Di a
   (Vector3Di (i, j, k)) + (Vector3Di (x, y, z)) = Vector3Di (i + x, j + y, k + z)
@@ -45,3 +41,7 @@ infixl 9 &
 instance (Show a) => Show (Vector3Di a) where
   show :: Vector3Di a -> String
   show (Vector3Di (i, j, k)) = "(" ++ show i ++ ", " ++ show j ++ ", " ++ show k ++ ")"
+
+instance (Eq a) => Eq (Vector3Di a) where
+  (==) :: Vector3Di a -> Vector3Di a -> Bool
+  (Vector3Di (i, j, k)) == (Vector3Di (x, y, z)) = i == x && j == y && k == z
