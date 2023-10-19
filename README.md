@@ -13,6 +13,12 @@ Ejercicio3: Ejecutar con:
 pytest Pr3.py
 pytest --cov=ejer3 Pr3.py
 
-Ejercicio4:
+Ejercicio4: Ejecutar con: 
+runhaskell PruebaV3.hs
 
+Compilar: ghc -fhpc V3.hs
+          ghc -fhpc PruebaV3.hs
+          ./PruevaV3
+          hpc report PruebaV3  o  hpc report PruebaV3.tix
+          
 Ejercicio6: Compilar con GHC y al ejecutar el programa, pasar con un valor n > 2
